@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Harshavardhan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Raleway", sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .nav-link {
+      transition: all 0.3s ease-in-out;
+    }
+    .nav-link:hover {
+      color: #ffffff !important;
+      background-color: #0d6efd !important;
+      animation: blink-highlight 0.6s alternate 2;
+      border-radius: 5px;
+    }
+    @keyframes blink-highlight {
+      0% { background-color: #0d6efd; color: white; }
+      50% { background-color: #0b5ed7; color: white; }
+      100% { background-color: #0d6efd; color: white; }
+    }
+    #education .card:hover {
+      background-color: grey;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    .sidebar {
+      width: 300px;
+      position: fixed;
+      height: 100%;
+      background-color: #6FB1FC;
+      z-index: 3;
+      padding: 1rem;
+      top: 0;
+      left: 0;
+      color: white;
+    }
+    .sidebar a {
+      color: white;
+    }
+    .sidebar a:hover {
+      color: #ffc107 !important;
+    }
+    .mobile-header {
+      display: none;
+      background: linear-gradient(to right, #0052D4, #4364F7, #6FB1FC);
+    }
+    @media (max-width: 991px) {
+      .sidebar {
+        display: none;
+      }
+      .mobile-header {
+        display: block;
+        background-color: #343a40;
+        border-bottom: 1px solid #ccc;
+        padding: 1rem;
+      }
+      .mobile-header .navbar-brand,
+      .mobile-header .nav-link {
+        color: white;
+      }
+      .mobile-header .nav-link:hover {
+        color: #ffc107 !important;
+      }
+    }
+    .main-content {
+      margin-left: 300px;
+      padding: 1rem;
+    }
+    @media (max-width: 991px) {
+      .main-content {
+        margin-left: 0;
+      }
+    }
+    .hover-opacity:hover {
+      opacity: 0.7;
+    }
+    .card-hover:hover {
+      background-color: #d3d3d3;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    .btn-hover:hover {
+      background-color: #0d6efd !important;
+      color: white !important;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(45deg, #ff6b6b, #ff9472);
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 20px;
+      z-index: 999;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    .back-to-top:hover {
+      transform: scale(1.1);
+      background: linear-gradient(45deg, #e84118, #f39c12);
+    }
+    #contact {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    @media (min-width: 992px) {
+      #contact {
+        margin-left: 300px;
+      }
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+<!-- Mobile Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark d-lg-none mobile-header">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../static/images/Harsha.jpg" class="rounded-circle border border-3 border-light" style="width: 50px; height: 50px; object-fit: cover;" />
+      <span class="ms-2">Harshavardhan</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbar" aria-controls="mobileNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mobileNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar Navigation -->
+<div class="sidebar border-end d-none d-lg-block" id="sidebar">
+  <div class="text-center">
+    <img src="../static/images/Harsha.jpg" 
+         class="rounded-circle border border-3 border-light" style="width:45%; object-fit: cover; aspect-ratio: 1 / 1;" /><br><br>
+    <h4><b>PORTFOLIO</b></h4>
+    <p class="text-light">Developed by Harshavardhan</p>
+  </div>
+  <nav class="nav flex-column">
+    <a class="nav-link" href="#projects">PROJECTS</a>
+    <a class="nav-link" href="#education">EDUCATION</a>
+    <a class="nav-link" href="#about">ABOUT</a>
+    <a class="nav-link" href="#contact">CONTACT INFORMATION</a>
+  </nav>
+  <div class="mt-4 text-center">
+    <a href="https://www.instagram.com/_harsha_nalluri" target="_blank" class="text-light text-decoration-none">
+      <i class="fa fa-instagram me-3 hover-opacity"></i>
+    </a>
+    <a href="https://www.snapchat.com/add/harsha2924" target="_blank" class="text-light text-decoration-none">
+      <i class="fa fa-snapchat me-3 hover-opacity"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/harsha-nalluri-a48b09197/" target="_blank" class="text-light text-decoration-none">
+      <i class="fa fa-linkedin hover-opacity"></i>
+    </a>
+  </div>
+</div>
+
+<div class="sidebar border-end d-none d-lg-block" id="sidebar">
+  <div class="text-center">
+    <img src="../static/images/Harsha.jpg" 
+         class="rounded-circle border border-3 border-dark" style="width:45%; object-fit: cover; aspect-ratio: 1 / 1;" /><br><br>
+    <h4><b>PORTFOLIO</b></h4>
+    <p class="text-muted">Developed by Harshavardhan</p>
+  </div>
+  <nav class="nav flex-column">
+    <a class="nav-link text-primary" href="#projects">PROJECTS</a>
+    <a class="nav-link" href="#education">EDUCATION</a>
+    <a class="nav-link" href="#about">ABOUT</a>
+    <a class="nav-link" href="#contact">CONTACT INFORMATION</a>
+  </nav>
+  <div class="mt-4 text-center">
+    <a href="https://www.instagram.com/_harsha_nalluri" target="_blank" class="text-dark text-decoration-none">
+      <i class="fa fa-instagram me-3 hover-opacity"></i>
+    </a>
+    <a href="https://www.snapchat.com/add/harsha2924" target="_blank" class="text-dark text-decoration-none">
+      <i class="fa fa-snapchat me-3 hover-opacity"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/harsha-nalluri-a48b09197/" target="_blank" class="text-dark text-decoration-none">
+      <i class="fa fa-linkedin hover-opacity"></i>
+    </a>
+  </div>
+</div>
+
+<div class="main-content">
+  <header id="projects" class="p-4">
+    <h1><b>NALLURI HARSHAVARDHAN</b></h1>
+  </header>
+
+  <div class="container">
+    <h3><b>Projects</b></h3>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <a href="health.html" class="text-decoration-none text-dark">
+          <div class="card card-hover h-100 text-center">
+            <img src="../static/images/health.jpg" class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+            <div class="card-body">
+              <h5 class="card-title"><b>HEALTHCARE ANALYTICS GUI DESIGN</b></h5>
+              <p>Master's Major Project - Saint Louis University</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="employee.html" class="text-decoration-none text-dark">
+          <div class="card card-hover h-100 text-center">
+            <img src="../static/images/employee.jpg" class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+            <div class="card-body">
+              <h5 class="card-title"><b>EMPLOYEE SATISFACTION ANALYSIS</b></h5>
+              <p>Applied Analytics Course Project - Saint Louis University</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="childbirth.html" class="text-decoration-none text-dark">
+          <div class="card card-hover h-100 text-center">
+            <img src="../static/images/childbirth.jpg" class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+            <div class="card-body">
+              <h5 class="card-title"><b>PREDICTING BEST SUITABLE MODE OF CHILDBIRTH</b></h5>
+              <p>Bachelor's Major Project - Dhanekula Institute of Engineering & Technology</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    <div class="col-md-4">
+      <a href="tcs.html" class="text-decoration-none text-dark">
+        <div class="card card-hover h-100 text-center">
+          <img src="../static/images/tcs.jpg" 
+               class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+          <div class="card-body">
+            <h5 class="card-title"><b>TCS REVENUE</b></h5>
+              <p>Enterprise Architecture Course Project - Saint Louis University</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    </div>
+  </div>
+
+  <h3 class="mt-5"><b>Work Experience</b></h3>
+  <div class="row g-3">
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="../static/images/web.jpg" class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+        <div class="card-body">
+          <h5 class="card-title">Web Application Development</h5>
+          <p class="card-text">Company - INNOGEEKS TECHNOLOGIES, VJA, INDIA (Aug 2022 - Jan 2023)</p>
+          <p>Developed responsive web forms and interactive UIs using HTML, CSS, JavaScript, and jQuery. Integrated APIs with AJAX, JSON, and XML, and managed database connections via JDBC-ODBC. Used debugging tools for optimization and created technical documentation and design diagrams.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="education" class="section-grey mt-5">
+    <h3><b>Education</b></h3>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="card p-3">
+          <h5 class="card-title mb-1"><b>Master of Science in Information Systems</b></h5>
+          <p class="mb-0">Saint Louis University, Missouri, USA</p>
+          <small class="text-muted">2023 - 2025</small>
+          <p>Score : 3.5/4.0 (GPA)</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-3">
+          <h5 class="card-title mb-1"><b>Bachelor of Technology in CSE</b></h5>
+          <p class="mb-0">Dhanekula Institute of Engineering & Technology, Andhra Pradesh, India</p>
+          <small class="text-muted">2019 - 2023</small>
+          <p>Score : 7.2/10 (GPA)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-5" id="about">
+    <h4><b>About Me</b></h4>
+    <p>Detail-oriented and analytical Master’s student in Information Systems with a strong academic foundation and hands-on technical experience. Seeking an entry-level Data Analyst role to apply skills in data analysis, visualization, and reporting using tools like Power BI, Python, and SQL to support business intelligence and insights.</p>
+    <hr />
+    <h4><b>Technical Skills</b></h4>
+    <p><strong>Data Analytics & Visualization:</strong> Power BI, Tableau, Excel (Pivot Tables, VLOOKUP), Google Data Studio</p>
+    <p><strong>Programming Languages:</strong> Python (Pandas, NumPy, Matplotlib), R (basic statistical analysis, data visualization)</p>
+    <p><strong>Databases & Querying:</strong> SQL, MySQL, PostgreSQL, JDBC-ODBC</p>
+    <p><strong>Technical Expertise:</strong> Proficient in HTML5, CSS3, and JavaScript with knowledge of frameworks and libraries such as Bootstrap, AngularJS, and jQuery.</p>
+    <a href="https://drive.google.com/uc?export=download&id=1xoLXccaB77zOulE_d9tbo0d0WDBUpcsO" target="_blank" rel="noopener">
+      <button class="btn btn-dark btn-hover my-3">
+        <i class="fa fa-download me-2"></i>Download Resume
+      </button>
+    </a>
+    <hr />
+  </div>
+
+  <div class="bg-secondary text-white p-4" id="contact-info">
+    <h4 class="mb-4"><b>Contact Information</b></h4>
+    <div class="row text-center">
+      <div class="col-md-4 mb-3">
+        <div class="p-3 bg-dark rounded shadow-sm h-100">
+          <i class="fa fa-envelope fa-2x mb-2"></i>
+          <h5>Email</h5>
+          <a href="mailto:harshanalluri29@gmail.com" class="text-white text-decoration-none">harshanalluri29@gmail.com</a>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <a href="tel:+13142810956" class="p-3 bg-dark rounded shadow-sm h-100 d-block text-white text-decoration-none">
+          <i class="fa fa-phone fa-2x mb-2"></i>
+          <h5>Phone</h5>
+          <p>+1 3142810956</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="p-3 bg-dark rounded shadow-sm h-100">
+          <i class="fa fa-map-marker fa-2x mb-2"></i>
+          <h5>Address</h5>
+          <a href="https://www.google.com/maps/place/12664+Mateus+Dr,+St.+Louis,+MO+63146/" target="_blank" class="text-white text-decoration-none">
+            Saint Louis, Missouri, US
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Me Section -->
+<section id="contact" class="container mt-5">
+  <h3><b>Contact Me</b></h3>
+  <form action="https://formsubmit.co/harshanalluri29@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="/">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
+</section>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop">
+  <i class="fa fa-angle-double-up"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const backToTopButton = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopButton.style.display = 'block';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
+  });
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>

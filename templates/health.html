@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MODE OF CHILDBIRTH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8fafc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, #7ee8fa, #eec0c6);
+      color: #ffffff;
+      padding: 60px 20px 40px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .button-container {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-custom {
+      border-radius: 30px;
+      font-size: 0.9rem;
+      padding: 8px 16px;
+      white-space: nowrap;
+    }
+
+    /* Cards */
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card-body {
+      background-color: #ffffff;
+      padding: 20px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #e2e8f0;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 50px;
+      color: #333;
+    }
+
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 50%;
+      padding: 12px 15px;
+      font-size: 20px;
+      z-index: 999;
+      display: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-to-top:hover {
+      background-color: #0056b3;
+    }
+
+    /* Mobile Optimizations */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.3rem;
+      }
+
+      .button-container {
+        position: static;
+        margin-top: 15px;
+        justify-content: center;
+      }
+
+      .btn-custom {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+
+      .card-body {
+        padding: 15px;
+      }
+
+      .section-title {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="container-fluid">
+    <h1>
+      PREDICTING BEST SUITABLE MODE OF CHILDBIRTH USING MACHINE <br />
+      LEARNING ALGORITHM DASHBOARD
+    </h1>
+    <div class="button-container">
+      <a href="https://drive.google.com/file/d/1KMHLIeP94h6CM6MiOR2HTs_T2p4j9UsW/view?usp=sharing" target="_blank" class="btn btn-light btn-custom">Published Paper</a>
+      <a href="port.html" class="btn btn-outline-light btn-custom">Back to Portfolio</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <div class="row g-4">
+      <div class="col-12">
+        <div class="card shadow-sm">
+          <img src="../static/images/login.jpg" class="card-img-top" alt="Login Page" />
+          <div class="card-body">
+            <h5 class="section-title">Login Page</h5>
+            <p>➢ User logs in to our website to predict the mode of childbirth.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card shadow-sm">
+          <img src="../static/images/score.jpg" class="card-img-top" alt="Model Performance" />
+          <div class="card-body">
+            <h5 class="section-title">Model Performance</h5>
+            <p>➢ We achieved an accuracy of 87.5%. Metrics such as precision, recall, F1-score, and support are also displayed.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card shadow-sm">
+          <img src="../static/images/predict.jpg" class="card-img-top" alt="Prediction Dashboard" />
+          <div class="card-body">
+            <h5 class="section-title">Prediction Dashboard</h5>
+            <p>➢ Users enter birth remarks in the text field, and the model predicts and displays the mode of childbirth.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card shadow-sm">
+          <img src="../static/images/pie.jpg" class="card-img-top" alt="Pie Chart Accuracy" />
+          <div class="card-body">
+            <h5 class="section-title">Algorithm Accuracies - Pie Chart</h5>
+            <p>➢ Pie chart shows the accuracy of different algorithms used in our project.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card shadow-sm">
+          <img src="../static/images/line.jpg" class="card-img-top" alt="Line Chart Accuracy" />
+          <div class="card-body">
+            <h5 class="section-title">Algorithm Accuracies - Line Chart</h5>
+            <p>➢ Line chart displays accuracy trends of algorithms used in our project.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop"><i class="fa fa-angle-double-up"></i></a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Harsha - Healthcare Data Insights</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const backToTopButton = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
+ 

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TCS Enterprise Architecture Showcase</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    }
+    .navbar-brand, .nav-link, .btn {
+      color: white !important;
+    }
+    .btn:hover {
+      background-color: #ffc107;
+      color: black !important;
+    }
+    header, footer {
+      text-align: center;
+      padding: 2rem;
+    }
+    .gallery-item {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .image-title {
+      margin-top: 0.5rem;
+      font-weight: 600;
+      text-align: center;
+    }
+    .gallery-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .description {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .summary-section {
+      background-color: #ffffff;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 2rem;
+      text-align: center;
+    }
+    .image-wrapper {
+      max-width: 900px;
+      margin: auto;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #203a43;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 24px;
+      display: none;
+      z-index: 9999;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .back-to-top:hover {
+      background-color: #2c5364;
+      color: #ffc107;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg px-4 d-flex justify-content-between align-items-center">
+    <a class="navbar-brand" href="#">TCS Enterprise Architecture</a>
+    <a href="port.html" class="btn btn-outline-light">Back to Portfolio</a>
+  </nav>
+
+  <header>
+    <h1 class="display-5">TCS Enterprise Architecture Visuals</h1>
+    <p class="text-muted">A structured view of the course project showcasing frameworks, planning models, and strategic mapping.</p>
+  </header>
+
+  <section class="summary-section">
+    <h4 class="mb-3">Explore More on Google Sites</h4>
+    <p class="text-muted mb-3">A detailed breakdown and presentation of the project has been compiled into a structured website on Google Sites.</p>
+    <a href="https://sites.google.com/slu.edu/tcs-company/home?authuser=0" target="_blank" class="btn btn-primary">Visit Google Site</a>
+  </section>
+
+  <div class="container-fluid px-4 pb-5">
+    <div class="row gy-5">
+      <div class="col-12">
+        <div class="gallery-item image-wrapper">
+          <img src="../static/images/1.jpg" alt="Business Model Canvas" class="gallery-image">
+          <div class="image-title">1. Business Model Canvas</div>
+          <p class="description">Outlines the business's core logic through value propositions, customer segments, and key partnerships.</p><br>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="gallery-item image-wrapper">
+          <img src="../static/images/2.jpg" alt="Timeline In Progress" class="gallery-image">
+          <div class="image-title">2. Timeline - In Progress</div>
+          <p class="description">Shows current project progress highlighting ongoing tasks and phases.</p><br>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="gallery-item image-wrapper">
+          <img src="../static/images/3.jpg" alt="Timeline Completed" class="gallery-image">
+          <div class="image-title">3. Timeline - Completed All Tasks</div>
+          <p class="description">Highlights all finished stages of the project lifecycle.</p><br>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="gallery-item image-wrapper">
+          <img src="../static/images/4.jpg" alt="Tata Dashboard" class="gallery-image">
+          <div class="image-title">4. Tata Dashboard</div>
+          <p class="description">Visual dashboard of TCS metrics and performance indicators.</p><br>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="gallery-item image-wrapper">
+          <img src="../static/images/5.jpg" alt="Flowchart" class="gallery-image">
+          <div class="image-title">5. Flowchart</div>
+          <p class="description">Depicts logical steps of system workflows and data movement.</p><br>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="gallery-item image-wrapper">
+          <img src="../static/images/6.jpg" alt="BPMN" class="gallery-image">
+          <div class="image-title">6. BPMN</div>
+          <p class="description">BPMN representation for standardizing internal workflows.</p><br>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="gallery-item image-wrapper">
+          <img src="../static/images/7.jpg" alt="Agile Automation" class="gallery-image">
+          <div class="image-title">7. Agile Automation</div>
+          <p class="description">Uses agile methodology to automate business processes.</p><br>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="gallery-item image-wrapper">
+          <img src="../static/images/8.jpg" alt="Mindmap" class="gallery-image">
+          <div class="image-title">8. TCS Enterprise Mindmap</div>
+          <p class="description">Mindmap capturing TCS enterprise knowledge and structure.</p><br>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="gallery-item image-wrapper">
+          <img src="../static/images/9.jpg" alt="Operational Model" class="gallery-image">
+          <div class="image-title">9. TCS Enterprise Operational Model</div>
+          <p class="description">TCS operational model defining delivery structure and engagement paths.</p><br>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="gallery-item image-wrapper">
+          <img src="../static/images/10.jpg" alt="Archimate" class="gallery-image">
+          <div class="image-title">10. Archimate</div>
+          <p class="description">Archimate model visualizing layers of enterprise architecture.</p><br>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="gallery-item image-wrapper">
+          <img src="../static/images/11.jpg" alt="SWOT Analysis" class="gallery-image">
+          <div class="image-title">11. SWOT Analysis</div>
+          <p class="description">Evaluates TCS internal and external strengths, weaknesses, opportunities, and threats.</p><br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#" class="back-to-top" id="backToTop" title="Back to Top">
+    <i class="fa fa-angle-double-up"></i>
+  </a>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 Harshavardhan - Enterprise Architecture Portfolio</p>
+  </footer>
+
+<script>
+  const backToTop = document.getElementById("backToTop");
+  window.onscroll = function () {
+    backToTop.style.display = (document.documentElement.scrollTop > 200) ? "block" : "none";
+  };
+  backToTop.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
