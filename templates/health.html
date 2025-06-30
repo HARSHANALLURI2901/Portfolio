@@ -1,234 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>MODE OF CHILDBIRTH</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Bootstrap & Font Awesome -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-
+  <meta charset="UTF-8">
+  <title>Healthcare Claims Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f8fafc;
-      color: #333;
-      line-height: 1.6;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Header */
     header {
-      background: linear-gradient(to right, #7ee8fa, #eec0c6);
-      color: #ffffff;
-      padding: 60px 20px 40px;
+      background: #003366;
+      color: #fff;
+      padding: 20px;
       text-align: center;
       position: relative;
     }
 
-    header h1 {
-      font-size: 1.8rem;
-      font-weight: 600;
-    }
-
-    .button-container {
+    .redirect-button {
       position: absolute;
       top: 20px;
       right: 20px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .btn-custom {
-      border-radius: 30px;
-      font-size: 0.9rem;
-      padding: 8px 16px;
-      white-space: nowrap;
-    }
-
-    /* Cards */
-    .section-title {
-      font-size: 1.25rem;
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
-
-    .card {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #0059b3;
+      color: #fff;
+      font-size: 16px;
       border: none;
-      border-radius: 12px;
-      overflow: hidden;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    }
-
-    .card-img-top {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .card-body {
-      background-color: #ffffff;
-      padding: 20px;
-    }
-
-    /* Footer */
-    .footer {
-      background-color: #e2e8f0;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      margin-top: 50px;
-      color: #333;
-    }
-
-    /* Back to Top */
-    .back-to-top {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background-color: #007bff;
-      color: white;
-      border-radius: 50%;
-      padding: 12px 15px;
-      font-size: 20px;
-      z-index: 999;
-      display: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
       transition: background-color 0.3s ease;
     }
 
-    .back-to-top:hover {
-      background-color: #0056b3;
+    .redirect-button:hover {
+      background-color: #0073e6;
     }
 
-    /* Mobile Optimizations */
+    section {
+      background: #fff;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 900px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: relative;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    h2 {
+      color: #003366;
+      margin-top: 0;
+    }
+
+    .content {
+      display: none;
+      margin-top: 10px;
+    }
+
+    section:hover {
+      background-color: #e0e0e0;
+    }
+
+    section:hover .content {
+      display: block;
+    }
+
+    .content img {
+      width: 70%;
+      display: block;
+      margin: 10px auto;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #333;
+      padding: 0 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+
+    /* Responsive Design */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.3rem;
-      }
-
-      .button-container {
-        position: static;
-        margin-top: 15px;
-        justify-content: center;
-      }
-
-      .btn-custom {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-      }
-
-      .card-body {
+      header {
+        text-align: center;
         padding: 15px;
       }
 
-      .section-title {
-        font-size: 1.1rem;
+      .redirect-button {
+        position: static;
+        display: block;
+        margin: 10px auto 0;
+        text-align: center;
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+
+      h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      .content img {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      p {
+        font-size: 15px;
+        padding: 0;
+      }
+
+      section {
+        margin: 15px 10px;
+        padding: 15px;
+      }
+
+      .content {
+        display: block !important;
+        opacity: 1 !important;
+        height: auto !important;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="container-fluid">
-    <h1>
-      PREDICTING BEST SUITABLE MODE OF CHILDBIRTH USING MACHINE <br />
-      LEARNING ALGORITHM DASHBOARD
-    </h1>
-    <div class="button-container">
-      <a href="https://drive.google.com/file/d/1KMHLIeP94h6CM6MiOR2HTs_T2p4j9UsW/view?usp=sharing" target="_blank" class="btn btn-light btn-custom">Published Paper</a>
-      <a href="port.html" class="btn btn-outline-light btn-custom">Back to Portfolio</a>
-    </div>
-  </header>
+<header>
+  <h1>Healthcare Claims Data Analysis Dashboard</h1>
+  <a href="port.html" class="redirect-button">Back to Portfolio</a>
+</header>
 
-  <!-- Main Content -->
-  <main class="container my-5">
-    <div class="row g-4">
-      <div class="col-12">
-        <div class="card shadow-sm">
-          <img src="../static/images/login.jpg" class="card-img-top" alt="Login Page" />
-          <div class="card-body">
-            <h5 class="section-title">Login Page</h5>
-            <p>➢ User logs in to our website to predict the mode of childbirth.</p>
-          </div>
-        </div>
-      </div>
+<section>
+  <h2>USER IDENTIFICATION</h2>
+  <div class="content">
+    <img src="../static/images/USER IDENTIFICATION.png" alt="User Identification">
+    <p>
+      <b>Primary Users:</b> Claim Managers – Analyze claims data effectively to reduce errors and improve processing efficiency.<br>
+      <b>Secondary Users:</b> Healthcare Administrators – Use insights for strategic planning and management.<br>
+      <b>Justification:</b> Focused on roles that require actionable insights to improve operations and finances.
+    </p>
+  </div>
+</section>
 
-      <div class="col-12">
-        <div class="card shadow-sm">
-          <img src="../static/images/score.jpg" class="card-img-top" alt="Model Performance" />
-          <div class="card-body">
-            <h5 class="section-title">Model Performance</h5>
-            <p>➢ We achieved an accuracy of 87.5%. Metrics such as precision, recall, F1-score, and support are also displayed.</p>
-          </div>
-        </div>
-      </div>
+<section>
+  <h2>Provider Analysis Dashboard</h2>
+  <div class="content">
+    <img src="../static/images/Provider Analysis Dashboard.jpg" alt="Provider Dashboard">
+    <p>
+      <b>Objective:</b> Evaluate provider performance for accountability and improvement.<br>
+      <b>Components:</b> Custom filters and visuals for tracking efficiency.<br>
+      <b>Visuals:</b> Line Charts, Tables, Heatmaps, Bar Charts.
+    </p>
+  </div>
+</section>
 
-      <div class="col-12">
-        <div class="card shadow-sm">
-          <img src="../static/images/predict.jpg" class="card-img-top" alt="Prediction Dashboard" />
-          <div class="card-body">
-            <h5 class="section-title">Prediction Dashboard</h5>
-            <p>➢ Users enter birth remarks in the text field, and the model predicts and displays the mode of childbirth.</p>
-          </div>
-        </div>
-      </div>
+<section>
+  <h2>High-Cost Procedures Identification Dashboard</h2>
+  <div class="content">
+    <img src="../static/images/High-Cost Procedures Identification Dashboard.jpg" alt="High-Cost Dashboard">
+    <p>
+      <b>Purpose:</b> Identify and manage high-cost procedures in claims.<br>
+      <b>Core Components:</b> Filters and visuals to aid decision making.<br>
+      <b>Visuals:</b> Line Charts, Scatter Plots, Heatmaps, Bar Charts.
+    </p>
+  </div>
+</section>
 
-      <div class="col-12">
-        <div class="card shadow-sm">
-          <img src="../static/images/pie.jpg" class="card-img-top" alt="Pie Chart Accuracy" />
-          <div class="card-body">
-            <h5 class="section-title">Algorithm Accuracies - Pie Chart</h5>
-            <p>➢ Pie chart shows the accuracy of different algorithms used in our project.</p>
-          </div>
-        </div>
-      </div>
+<section>
+  <h2>Application Demonstration</h2>
+  <div class="content">
+    <img src="../static/images/Application Demonstration1.jpg" alt="Demo 1"><br>
+    <img src="../static/images/Application Demonstration2.jpg" alt="Demo 2" style="margin-top: 10px;">
+    <p>
+       <b>Overview:</b> This section showcases the actual implementation of the Healthcare Claims Dashboard. It demonstrates how users interact with the dashboards in real-time to derive meaningful insights.<br>
+       <b>Features Highlighted:</b> Dynamic filtering, visual interactivity, and responsive elements that allow users to drill down into specific claims data.<br>
+       <b>Use Case:</b> Enables claim managers and administrators to visually identify patterns, outliers, and critical cost centers to support data-driven decision-making.
+    </p>
 
-      <div class="col-12">
-        <div class="card shadow-sm">
-          <img src="../static/images/line.jpg" class="card-img-top" alt="Line Chart Accuracy" />
-          <div class="card-body">
-            <h5 class="section-title">Algorithm Accuracies - Line Chart</h5>
-            <p>➢ Line chart displays accuracy trends of algorithms used in our project.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+  </div>
+</section>
 
-  <!-- Back to Top Button -->
-  <a href="#" class="back-to-top" id="backToTop"><i class="fa fa-angle-double-up"></i></a>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Harsha - Healthcare Data Insights</p>
-  </footer>
-
-  <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const backToTopButton = document.getElementById('backToTop');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopButton.style.display = 'block';
-      } else {
-        backToTopButton.style.display = 'none';
-      }
-    });
-
-    backToTopButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+<footer>
+  <p>&copy; Harsha - Healthcare Data Insights</p>
+</footer>
 
 </body>
 </html>
- 
